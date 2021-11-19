@@ -15,7 +15,7 @@ class DBController {
         if($this->con->connect_error) {
             echo "Failed to connect database!".$this->con->connect_error;
         }
-        echo "Connection Successfull";
+        // echo "Connection Successfull";
     }
 
     public function __destruct() {
