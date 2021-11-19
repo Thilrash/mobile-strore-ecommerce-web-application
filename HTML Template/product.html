@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Mobile Store</title>
+    <title>Product Mobile Store</title>
     <!-- Bootstrap CDN -->
     <link
       rel="stylesheet"
@@ -35,7 +35,7 @@
     />
 
     <!-- Custom CSS file -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- header -->
@@ -106,116 +106,158 @@
 
     <!-- main -->
     <main id="main-site">
-      <!-- shopping cart details -->
-      <section id="cart" class="py-3">
-        <div class="container-fluid w-75">
-          <h5 class="font-montagu font-size-20">Shopping Cart</h5>
-
-          <!-- shopping cart items -->
+      <!-- product -->
+      <section id="product" class="py-3">
+        <div class="container">
           <div class="row">
-            <div class="col-sm-9">
-              <!-- cart items -->
-              <div class="row border-top py-3 mt-3">
-                <div class="col-sm-2">
-                  <img
-                    src="./assets/products/1.png"
-                    alt="product"
-                    class="img-fluid"
-                    style="height: 120px"
-                  />
+            <div class="col-sm-6">
+              <img
+                src="../assets/products/1.png"
+                alt="product"
+                class="img-fluid"
+              />
+              <div class="form-row pt-4 font-size-16 font-montagu">
+                <div class="col">
+                  <button type="submit" class="btn btn-danger form-control">
+                    Proceed to Buy
+                  </button>
                 </div>
-                <div class="col-sm-8">
-                  <h5 class="font-montagu font-size-20">
-                    Samsung Galaxy S6 Edge
-                  </h5>
-                  <small>by Samsung</small>
-                  <!-- product rating -->
-                  <div class="d-flex">
-                    <div class="rating text-warning font-size-12">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="far fa-star"></i></span>
+                <div class="col">
+                  <button type="submit" class="btn btn-warning form-control">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 py-5">
+              <h5 class="font-montagu">Samsung Galaxy S6 Edge</h5>
+              <small>by Samsung</small>
+              <div class="d-flex">
+                <div class="rating text-warning font-size-12">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <a
+                  href="#"
+                  class="px-2 font-montagu font-size-14 color-secondary"
+                  >15,874 ratings | 1K+ answered questions</a
+                >
+              </div>
+              <hr />
+
+              <!-- product price -->
+              <table class="my-3">
+                <tr class="font-montagu font-size-14">
+                  <td>M.R.P</td>
+                  <td><strike>$163.00</strike></td>
+                </tr>
+                <tr class="font-montagu font-size-14">
+                  <td>Price</td>
+                  <td class="font-size-20 text-danger">
+                    $<span>152.00</span
+                    ><small class="text-dark font-size-20"
+                      >&nbsp;&nbsp;inclusive of all taxes</small
+                    >
+                  </td>
+                </tr>
+                <tr class="font-montagu font-size-14">
+                  <td>You Save</td>
+                  <td>
+                    <span class="font-size-12 text-danger">$11.00</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Policy -->
+              <div id="policy">
+                <div class="d-flex">
+                  <div class="return text-center mr-5">
+                    <div class="font-size-20 my-2 color-secondary">
+                      <span
+                        class="fas fa-retweet border p-3 rounded-pill"
+                      ></span>
                     </div>
                     <a
                       href="#"
-                      class="px-2 font-montagu font-size-12 color-secondary"
-                      >18,574 ratings</a
+                      class="font-montagu font-size-12 color-secondary"
+                      >10 Days <br />
+                      Replacement</a
                     >
                   </div>
-
-                  <!-- product quantity -->
-                  <div class="qty d-flex pt-2">
-                    <div class="d-flex font-montagu w-25">
-                      <button class="qty-up border bg-light" data-id="pro1">
-                        <i class="fas fa-angle-up"></i>
-                      </button>
-                      <input
-                        type="text"
-                        class="qty_input border px-2 w-50 bg-light"
-                        disabled
-                        value="1"
-                        placeholder="1"
-                        data-id="pro1"
-                      />
-                      <button class="qty-down border bg-light" data-id="pro1">
-                        <i class="fas fa-angle-down"></i>
-                      </button>
+                  <div class="return text-center mr-5">
+                    <div class="font-size-20 my-2 color-secondary">
+                      <span class="fas fa-truck border p-3 rounded-pill"></span>
                     </div>
-                    <button
-                      type="submit"
-                      class="btn text-danger px-3 border-right font-montagu"
+                    <a
+                      href="#"
+                      class="font-montagu font-size-12 color-secondary"
+                      >Mobile Store <br />
+                      Delivery</a
                     >
-                      Delete
-                    </button>
-                    <button
-                      type="submit"
-                      class="btn text-danger px-3 font-montagu"
-                    >
-                      Save for Later
-                    </button>
                   </div>
-                </div>
-                <div class="col-sm-2 text-right">
-                  <div class="font-size-20 text-danger font-montagu">
-                    $<span class="product_price">699</span>
+                  <div class="return text-center mr-5">
+                    <div class="font-size-20 my-2 color-secondary">
+                      <span
+                        class="fas fa-check-double border p-3 rounded-pill"
+                      ></span>
+                    </div>
+                    <a
+                      href="#"
+                      class="font-montagu font-size-12 color-secondary"
+                      >1 Year <br />
+                      Warranty</a
+                    >
                   </div>
                 </div>
               </div>
-              <!-- cart items -->
-              <div class="row border-top py-3 mt-3">
-                <div class="col-sm-2">
-                  <img
-                    src="./assets/products/2.png"
-                    alt="product"
-                    class="img-fluid"
-                    style="height: 120px"
-                  />
-                </div>
-                <div class="col-sm-8">
-                  <h5 class="font-montagu font-size-20">Redmi Note 1</h5>
-                  <small>by Redmi</small>
-                  <!-- product rating -->
-                  <div class="d-flex">
-                    <div class="rating text-warning font-size-12">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="far fa-star"></i></span>
-                    </div>
-                    <a
-                      href="#"
-                      class="px-2 font-montagu font-size-12 color-secondary"
-                      >14,274 ratings</a
-                    >
-                  </div>
 
-                  <!-- product quantity -->
-                  <div class="qty d-flex pt-2">
-                    <div class="d-flex font-montagu w-25">
-                      <button class="qty-up border bg-light" data-id="pro2">
+              <hr />
+
+              <!-- order details -->
+              <div
+                id="order-details"
+                class="font-montagu d-flex flex-column text-dark"
+              >
+                <small>Delivery by : Feb 26 - Mar 2</small>
+                <small
+                  >Sold by :
+                  <a href="#" class="color-secondary">Mobile Store</a> (4.5 out
+                  of 5 | 16,558 ratings)</small
+                >
+                <small
+                  ><i class="fas fa-map-marker-alt color-secondary"></i
+                  >&nbsp;&nbsp;Deliver to Customer - 523465</small
+                >
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <!-- color -->
+                  <div class="color my-3">
+                    <div class="d-flex justify-content-between">
+                      <h6 class="font-montagu">Color</h6>
+                      <div class="p-2 color-yellow-bg rounded-circle">
+                        <button class="btn font-size-14"></button>
+                      </div>
+                      <div class="p-2 color-primary-bg rounded-circle">
+                        <button class="btn font-size-14"></button>
+                      </div>
+                      <div class="p-2 color-secondary-bg rounded-circle">
+                        <button class="btn font-size-14"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- qty -->
+                <div class="col-6">
+                  <div class="qty d-flex">
+                    <h6 class="font-montagu">Qty</h6>
+                    <div class="px-4 d-flex font-montagu">
+                      <button class="qty-up border bg-light" data-id="pro">
                         <i class="fas fa-angle-up"></i>
                       </button>
                       <input
@@ -224,73 +266,79 @@
                         disabled
                         value="1"
                         placeholder="1"
-                        data-id="pro2"
+                        data-id="pro"
                       />
-                      <button class="qty-down border bg-light" data-id="pro2">
+                      <button class="qty-down border bg-light" data-id="pro">
                         <i class="fas fa-angle-down"></i>
                       </button>
                     </div>
-                    <button
-                      type="submit"
-                      class="btn text-danger px-3 border-right font-montagu"
-                    >
-                      Delete
-                    </button>
-                    <button
-                      type="submit"
-                      class="btn text-danger px-3 font-montagu"
-                    >
-                      Save for Later
-                    </button>
                   </div>
                 </div>
-                <div class="col-sm-2 text-right">
-                  <div class="font-size-20 text-danger font-montagu">
-                    $<span class="product_price">329</span>
+              </div>
+
+              <!-- size -->
+              <div class="size my-3">
+                <h6 class="font-montagu">Size</h6>
+                <div class="d-flex justify-content-between w-75">
+                  <div class="font-montagu border p-2">
+                    <button class="btn p-o font-size-12">4GB RAM</button>
+                  </div>
+                  <div class="font-montagu border p-2">
+                    <button class="btn p-o font-size-12">6GB RAM</button>
+                  </div>
+                  <div class="font-montagu border p-2">
+                    <button class="btn p-o font-size-12">8GB RAM</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-3">
-              <!-- sub total -->
-              <div class="sub-total border text-center mt-2">
-                <p class="font-size-12 font-montagu text-success py-3">
-                  <i class="fas fa-check"></i> Your order is eligible for free
-                  delivery
-                </p>
-                <div class="border-top py-5">
-                  <h6 class="font-montagu font-size-20">
-                    Sub Total (2 items)&nbsp;<span class="text-danger"
-                      >$<span class="text-danger" id="deal-price"
-                        >1,028.00</span
-                      ></span
-                    >
-                  </h6>
-                  <button
-                    type="submit"
-                    class="btn btn-warning mt-3 font-montagu"
-                  >
-                    Proceed to Buy
-                  </button>
-                </div>
-              </div>
+
+            <div class="col-12">
+              <h5 class="font-montagu">Product Description</h5>
+              <hr />
+              <p class="font-montagu font-size-14">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                in suscipit risus. Proin vestibulum pellentesque augue sed
+                interdum. Duis gravida nunc lorem, vel tempor mi fringilla
+                interdum. Fusce tortor massa, convallis non sodales ac,
+                fringilla mattis lacus. Proin suscipit diam quis est fringilla
+                lacinia. Mauris at enim a odio faucibus faucibus et at lacus.
+                Sed et nunc felis. Sed maximus, ante ut volutpat sagittis, magna
+                mauris condimentum orci, maximus tempor nunc diam quis risus.
+                Nam sed felis eleifend, ullamcorper metus ac, pharetra purus.
+                Sed commodo velit urna, et egestas ante volutpat id. Suspendisse
+                vel euismod urna. Vivamus pellentesque molestie luctus.
+              </p>
+              <p class="font-montagu font-size-14">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                in suscipit risus. Proin vestibulum pellentesque augue sed
+                interdum. Duis gravida nunc lorem, vel tempor mi fringilla
+                interdum. Fusce tortor massa, convallis non sodales ac,
+                fringilla mattis lacus. Proin suscipit diam quis est fringilla
+                lacinia. Mauris at enim a odio faucibus faucibus et at lacus.
+                Sed et nunc felis. Sed maximus, ante ut volutpat sagittis, magna
+                mauris condimentum orci, maximus tempor nunc diam quis risus.
+                Nam sed felis eleifend, ullamcorper metus ac, pharetra purus.
+                Sed commodo velit urna, et egestas ante volutpat id. Suspendisse
+                vel euismod urna. Vivamus pellentesque molestie luctus.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- New Arrivals -->
-      <div id="new-arrivals">
+      <!-- top sale -->
+      <section id="top-sale">
         <div class="container py-5">
-          <h4 class="font-montagu">New Arrivals</h4>
+          <h4 class="font-montagu font-size-20">Top Sale</h4>
           <hr />
           <!-- carousel -->
           <div class="owl-carousel owl-theme">
-            <div class="item py-2 bg-light">
+            <div class="item py-2">
               <div class="product font-poppins">
                 <a href="#"
                   ><img
-                    src="./assets/products/1.png"
+                    src="../assets/products/1.png"
                     alt="product1"
                     class="img-fluid"
                 /></a>
@@ -312,11 +360,11 @@
                 </div>
               </div>
             </div>
-            <div class="item py-2 bg-light">
+            <div class="item py-2">
               <div class="product font-poppins">
                 <a href="#"
                   ><img
-                    src="./assets/products/2.png"
+                    src="../assets/products/2.png"
                     alt="product2"
                     class="img-fluid"
                 /></a>
@@ -338,11 +386,11 @@
                 </div>
               </div>
             </div>
-            <div class="item py-2 bg-light">
+            <div class="item py-2">
               <div class="product font-poppins">
                 <a href="#"
                   ><img
-                    src="./assets/products/3.png"
+                    src="../assets/products/3.png"
                     alt="product3"
                     class="img-fluid"
                 /></a>
@@ -364,11 +412,11 @@
                 </div>
               </div>
             </div>
-            <div class="item py-2 bg-light">
+            <div class="item py-2">
               <div class="product font-poppins">
                 <a href="#"
                   ><img
-                    src="./assets/products/4.png"
+                    src="../assets/products/4.png"
                     alt="product4"
                     class="img-fluid"
                 /></a>
@@ -390,11 +438,11 @@
                 </div>
               </div>
             </div>
-            <div class="item py-2 bg-light">
+            <div class="item py-2">
               <div class="product font-poppins">
                 <a href="#"
                   ><img
-                    src="./assets/products/5.png"
+                    src="../assets/products/5.png"
                     alt="product5"
                     class="img-fluid"
                 /></a>
@@ -416,11 +464,11 @@
                 </div>
               </div>
             </div>
-            <div class="item py-2 bg-light">
+            <div class="item py-2">
               <div class="product font-poppins">
                 <a href="#"
                   ><img
-                    src="./assets/products/6.png"
+                    src="../assets/products/6.png"
                     alt="product6"
                     class="img-fluid"
                 /></a>
@@ -444,7 +492,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <br />
@@ -552,6 +600,6 @@
     ></script>
 
     <!-- Custom Javascript -->
-    <script src="./index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
