@@ -11,4 +11,6 @@
 
 ### Screenshots
 
+- The system's screenshots are in Screenshots folder
+
 <p>&copy All rights reserved to <a href="https://github.com/Thilrash">Thilrash Gowzul Ameen</a></p>
