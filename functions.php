@@ -22,6 +22,7 @@ $product_shuffle = $product->getData();
 
 // cart object
 $Cart = new Cart($db);
+// print_r($Cart->getCartID($product->getData('cart')));
 
 // $arr = array("user_id" => 1, "item_id" => 13);
 // $cart->insertIntoCart($arr);

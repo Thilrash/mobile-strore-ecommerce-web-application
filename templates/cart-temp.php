@@ -1,3 +1,11 @@
+<?php
+  if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if(isset($_POST['delete-cart-submit'])) {
+      $deleted_record = $Cart->deleteCart($_POST['item_id']);
+    }
+  }
+?>
+
 <!-- shopping cart details -->
       <section id="cart" class="py-3 mb-5">
         <div class="container-fluid w-75">
@@ -50,7 +58,7 @@
                     <!-- product quantity -->
                     <div class="qty d-flex pt-2">
                       <div class="d-flex font-montagu w-25">
-                        <button class="qty-up border bg-light" data-id="pro1">
+                        <button class="qty-up border bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>">
                           <i class="fas fa-angle-up"></i>
                         </button>
                         <input
@@ -59,22 +67,20 @@
                           disabled
                           value="1"
                           placeholder="1"
-                          data-id="pro1"
+                          data-id="<?php echo $item['item_id'] ?? '0'; ?>"
                         />
-                        <button class="qty-down border bg-light" data-id="pro1">
+                        <button class="qty-down border bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>">
                           <i class="fas fa-angle-down"></i>
                         </button>
                       </div>
-                      <button
-                        type="submit"
-                        class="btn text-danger px-3 border-right font-montagu"
-                      >
-                        Delete
-                      </button>
-                      <button
-                        type="submit"
-                        class="btn text-danger px-3 font-montagu"
-                      >
+
+                      <form action="" method="post">
+                        <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
+                        <button type="submit" name="delete-cart-submit" class="btn text-danger px-3 border-right font-montagu">Delete</button>
+                      </form>
+
+                      
+                      <button type="submit" class="btn text-danger px-3 font-montagu">
                         Save for Later
                       </button>
                     </div>
@@ -104,7 +110,7 @@
                   delivery
                 </p>
                 <div class="border-top py-5">
-                  <h6 class="font-montagu font-size-20">Sub Total (<?php echo count($sub_total) ?? 0; ?> items) &nbsp; 
+                  <h6 class="font-montagu font-size-20">Sub Total (<?php echo isset($sub_total) ? count($sub_total) : 0; ?> items) &nbsp; 
                     <span class="text-danger">$<span class="text-danger" id="deal-price"> 
                       <?php echo isset($sub_total) ? $Cart->getSum($sub_total) : 0; ?>
                     </span>
