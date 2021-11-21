@@ -9,6 +9,16 @@ $unique = array_unique($brand);
 sort($unique);
 
 // print_r($unique);
+
+shuffle($product_shuffle);
+
+// request method post
+if($_SERVER['REQUEST_METHOD'] == "POST") {
+    if(isset($_POST['today_price_submit'])) {
+        // call method add to cart 
+        $cart->addToCart($_POST['user_id'], $_POST['item_id']);
+    }
+}
 ?>
 
 <!-- today price -->
@@ -34,14 +44,14 @@ sort($unique);
             <div class="grid-item border <?php echo $item['item_brand'] ?? "Brand";?>">
                 <div class="item py-2" style="width: 200px">
                     <div class="product font-montagu">
-                        <a href="#"
+                        <a href="<?php printf('%s?item_id=%s', 'product.php', $item['item_id']); ?>"
                         ><img
-                                src="<?php echo $item['item_image'] ?? "./assets/products/11.png"; ?>"
+                                src="<?php echo $item['item_image'] ?? "./assets/products/1.png" ?>"
                                 alt="product11"
                                 class="img-fluid"
                             /></a>
                         <div class="text-center">
-                            <h6><?php echo $item['item_name'] ?? "Unknown"; ?></h6>
+                            <h6><?php echo $item['item_name'] ?? "Unknown" ?></h6>
                             <div class="rating text-warning font-size-12">
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
@@ -52,9 +62,13 @@ sort($unique);
                             <div class="price py-2">
                                 <span>$<?php echo $item['item_price'] ?? 0; ?></span>
                             </div>
-                            <button type="submit" class="btn btn-warning font-size-12">
-                                Add to Cart
+                            <form method="post">
+                            <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
+                            <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                            <button type="submit" name="today_price_submit" class="btn btn-warning font-size-12">
+                            Add to Cart
                             </button>
+                        </form>
                         </div>
                     </div>
                 </div>
