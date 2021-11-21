@@ -1,0 +1,23 @@
+{
+  "name": "mobile-store",
+  "version": "1.0.0",
+  "description": "E-Commerce web based application for mobile store.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./sass/style.scss style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thilrash/mobile-strore-ecommerce-web-application.git"
+  },
+  "keywords": [
+    "mobile-store"
+  ],
+  "author": "Thilrash Gowzul Ameen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thilrash/mobile-strore-ecommerce-web-application/issues"
+  },
+  "homepage": "https://github.com/Thilrash/mobile-strore-ecommerce-web-application#readme"
+}
